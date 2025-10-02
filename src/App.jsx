@@ -42,7 +42,8 @@ function App() {
     { name: 'Sobre', href: 'about' },
     { name: 'Galeria', href: 'gallery' },
     { name: 'Como Chegar', href: 'location' },
-    { name: 'Enviar Imagens', href: 'upload' },
+    { name: 'Modalidades', href: 'modalidades' },
+    //{ name: 'Enviar Imagens', href: 'upload' },
   ]
 
   const handleFileUpload = (event) => {
@@ -67,10 +68,13 @@ function App() {
             Academia de Artes Marciais - Karatê e Kickboxing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+   
+            <Button size="lg" className="bg-orange-600 hover:bg-orange-700" 
+              onClick={() => window.open('https://wa.me/5545999321184?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20na%20Academia%20Nintai.', '_blank')}>
               Agende sua Aula Experimental
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+
+            <Button size="lg" className="bg-black text-white hover:bg-black-100">
               Conheça Nossa Academia
             </Button>
           </div>
@@ -367,10 +371,10 @@ function App() {
               <div>
                 <p className="font-semibold">Academia Nintai</p>
                 <p className="text-muted-foreground">
-                  Rua das Artes Marciais, 123<br />
+                  Rua Pernambuco, 344<br />
                   Bairro Centro<br />
-                  São Paulo - SP<br />
-                  CEP: 01234-567
+                  Cascavel - PR<br />
+                  CEP: 
                 </p>
               </div>
               
@@ -418,7 +422,7 @@ function App() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <GoogleMap address="Rua das Artes Marciais, 123, São Paulo - SP" />
+            <GoogleMap address="Rua Pernambuco, 344, Cascavel - PR" />
           </CardContent>
         </Card>
 
@@ -437,10 +441,10 @@ function App() {
               </div>
               
               <div>
-                <h3 className="font-semibold mb-2">Transporte Público:</h3>
+                <h3 className="font-semibold mb-2">Referência:</h3>
                 <p className="text-muted-foreground">
-                  Estação de metrô mais próxima: Estação Centro (Linha Azul) - 5 minutos a pé.<br />
-                  Linhas de ônibus: 100, 200, 300 - Ponto na Rua das Artes Marciais.
+                  Anexo a Academia Energize.
+                  Em frente ao colégio adventista
                 </p>
               </div>
             </div>
@@ -592,12 +596,44 @@ function App() {
     </div>
   )
 
+  const ModalidadesPages = () => (
+    <div className="min-h-screen py-20">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-4xl font-bold text-center mb-12">Modalidades</h1>
+        <div href='./pages/Modalidades.jsf'></div>
+
+         <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle>Karatê</CardTitle>
+              <CardDescription>
+                Pais e responsáveis podem enviar fotos e vídeos dos campeonatos e treinos. 
+                Suas imagens podem ser publicadas em nossa galeria!
+              </CardDescription>
+            </CardHeader>
+          </Card>
+          
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle>Kickboxing</CardTitle>
+              <CardDescription>
+                Pais e responsáveis podem enviar fotos e vídeos dos campeonatos e treinos. 
+                Suas imagens podem ser publicadas em nossa galeria!
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
+
   const renderPage = () => {
     switch (currentPage) {
       case 'home': return <HomePage />
       case 'about': return <AboutPage />
       case 'gallery': return <GalleryPage />
       case 'location': return <LocationPage />
+      case 'modalidades': return <ModalidadesPages />
       case 'upload': return <UploadPage />
       default: return <HomePage />
     }
@@ -633,7 +669,7 @@ function App() {
               <Button 
                 size="sm" 
                 className="bg-green-600 hover:bg-green-700"
-                onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+                onClick={() => window.open('https://wa.me/5545999321184', '_blank')}
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp
@@ -676,7 +712,7 @@ function App() {
               <Button 
                 size="sm" 
                 className="w-full bg-green-600 hover:bg-green-700 mt-4"
-                onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+                onClick={() => window.open('https://wa.me/5545999321184', '_blank')}
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp
@@ -716,7 +752,7 @@ function App() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
-                  <span>Rua das Artes Marciais, 123</span>
+                  <span>Rua Pernambuco, 344</span>
                 </div>
               </div>
             </div>

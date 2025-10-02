@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { MapPin, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
 
-const GoogleMap = ({ address = "Rua das Artes Marciais, 123, São Paulo - SP" }) => {
+const GoogleMap = ({ address = "Rua Pernambuco, 344, Cascavel - PR" }) => {
   const [mapLoaded, setMapLoaded] = useState(false)
   
   // Encode the address for Google Maps URL

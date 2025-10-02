@@ -24,7 +24,7 @@ const SocialMedia = ({ size = "default", showLabels = false }) => {
     {
       name: 'WhatsApp',
       icon: MessageCircle,
-      url: 'https://wa.me/5511999999999',
+      url: 'https://wa.me/5545999321184',
       color: 'hover:bg-green-600'
     }
   ]

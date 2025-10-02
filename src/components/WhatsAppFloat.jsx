@@ -7,7 +7,7 @@ const WhatsAppFloat = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [showTooltip, setShowTooltip] = useState(false)
   
-  const whatsappNumber = "5511999999999"
+  const whatsappNumber = "5545999321184"
   const message = "Olá! Gostaria de saber mais sobre as aulas na Academia Nintai."
   
   useEffect(() => {
