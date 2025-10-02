@@ -32,6 +32,8 @@ import karateTraining from './assets/nintai_karate_training.png'
 import kickboxingTraining from './assets/nintai_kickboxing_training.png'
 import championshipImage from './assets/nintai_championship.png'
 
+import Modalidades from './pages/Modalidades.jsx';
+
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -599,30 +601,8 @@ function App() {
   const ModalidadesPages = () => (
     <div className="min-h-screen py-20">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12">Modalidades</h1>
-        <div href='./pages/Modalidades.jsf'></div>
-
-         <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle>Karatê</CardTitle>
-              <CardDescription>
-                Pais e responsáveis podem enviar fotos e vídeos dos campeonatos e treinos. 
-                Suas imagens podem ser publicadas em nossa galeria!
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle>Kickboxing</CardTitle>
-              <CardDescription>
-                Pais e responsáveis podem enviar fotos e vídeos dos campeonatos e treinos. 
-                Suas imagens podem ser publicadas em nossa galeria!
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
+        <h1 className="text-4xl font-bold text-center">Modalidades</h1>
+        <Modalidades />
       </div>
     </div>
   )
